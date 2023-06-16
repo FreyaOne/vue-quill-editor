@@ -110,7 +110,7 @@
 
           // Set editor content
           if (this.value || this.content) {
-            this.quill.pasteHTML(this.value || this.content)
+            this.quill.dangerouslyPasteHTML(this.value || this.content)
           }
 
           // Disabled editor

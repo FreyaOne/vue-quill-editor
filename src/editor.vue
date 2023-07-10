@@ -8,8 +8,16 @@
 <script>
 // require sources
 import _Quill from "quill";
-
 const Quill = window.Quill || _Quill;
+import * as QuillTableUI from "quill-table-ui";
+// import "quill-table-ui/dist/index.css";
+Quill.register(
+  {
+    "modules/tableUI": QuillTableUI.default,
+  },
+  true
+);
+
 const defaultOptions = {
   theme: "snow",
   boundary: document.body,
